@@ -8,8 +8,11 @@ import fitz
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 
+# chatgpt suggests this
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
 # Configure the API key
-GOOGLE_API_KEY = 'AIzaSyDGgKEl-hCJ4-aHnXjFipylIZsS3a2ZxPY'
+# GOOGLE_API_KEY = 'AIzaSyDGgKEl-hCJ4-aHnXjFipylIZsS3a2ZxPY'
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # FastAPI app initialization
