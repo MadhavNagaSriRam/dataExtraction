@@ -18,6 +18,12 @@ genai.configure(api_key=GOOGLE_API_KEY)
 # FastAPI app initialization
 app = FastAPI()
 
+# chatgpt suggested
+@app.get("/")
+async def root():
+    return {"message": "Hello, FastAPI on Vercel!"}
+
+
 def validate_pdf(filename: str, content: bytes) -> bool:
     """Validate if the file is a PDF"""
     if not filename.lower().endswith('.pdf'):
