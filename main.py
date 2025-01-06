@@ -8,6 +8,13 @@ import fitz
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env file
+
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+
+
 # Configure the API key securely from environment variable
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
