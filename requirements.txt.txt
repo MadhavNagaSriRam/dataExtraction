@@ -1,0 +1,5 @@
+google-generative-ai
+Pillow
+PyMuPDF
+fastapi
+uvicorn
